@@ -30,24 +30,24 @@ jobs:
             - name: Run automation demo
               id: demo
               run: |
-                  echo "🚀 Starting Vacation Rental Intelligence Agent Demo"
+                  echo "Starting Vacation Rental Intelligence Agent Demo"
                   echo "=================================================="
-                  python vacation_rental_automation_demo.py
+                  python github_demo.py
 
             - name: Generate demo report
               run: |
-                  echo "📊 Generating Demo Report"
+                  echo "Generating Demo Report"
                   echo "========================"
 
                   # Create a comprehensive demo report
                   cat > demo_report.md << 'EOF'
-                  # 🚀 Vacation Rental Intelligence Agent - Live Demo Results
+                  # Vacation Rental Intelligence Agent - Live Demo Results
 
                   **Generated:** $(date)
                   **Workflow:** ${{ github.workflow }}
                   **Run ID:** ${{ github.run_id }}
 
-                  ## 📈 Demo Execution Summary
+                  ## Demo Execution Summary
 
                   This automation successfully processed vacation rental data and generated actionable insights.
 
@@ -166,7 +166,7 @@ jobs:
                       github.rest.issues.create({
                         owner: context.repo.owner,
                         repo: context.repo.repo,
-                        title: '🚀 Automation Demo Results - ' + new Date().toISOString().split('T')[0],
+                        title: 'Automation Demo Results - ' + new Date().toISOString().split('T')[0],
                         body: report,
                         labels: ['demo', 'automation', 'holidu-application']
                       });
