@@ -1,4 +1,4 @@
-# 🚀 Vacation Rental Intelligence Agent
+# Vacation Rental Intelligence Agent
 
 ## Live GitHub Actions Demo for Holidu Application
 
